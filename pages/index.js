@@ -10,7 +10,6 @@ export default function Home() {
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
-    console.log(user);
   });
 
   return (
@@ -21,9 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <button onClick={() => signInWithPopup(auth, provider)}>Sign in with popup</button>
+
       {user ? <p>Hello, {user.displayName}</p> : null}
-      {user ? <button onClick={() => signOut(auth)}>Sign Out</button> : null}
+      {user ?
+        <button onClick={() => signOut(auth)}>Sign Out</button> :
+        <button onClick={() => signInWithPopup(auth, provider)}>Sign in with popup</button>}
+
     </div>
   );
 }

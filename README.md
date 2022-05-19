@@ -1,5 +1,7 @@
 # next-firebase-google-auth App
 
+`You will need to enable popups for this app`
+
 I started this project to practice `NextJs` and `firebase` Authentication.
 
 This time using `google` authentication pop up.

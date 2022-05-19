@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { useState } from 'react';
 import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from './api/firebase-config';
+import { useState } from 'react';
 
 const provider = new GoogleAuthProvider();
 
